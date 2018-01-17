@@ -40,7 +40,7 @@ MobX 可以做很多事，但是它无法使原始数据类型值转变成可观
 ```javascript
 React.render(<Timer timerData={timerData.secondsPassed} />, document.body)
 ```
-在这个代码片段中只是把 `secondsPassed` 的当前值传递给了 `Timer` 组件，这个值是不可变值`0`(JS中所有的原始类型值都是不可变的)。
+在这个代码片段中只是把 `secondsPassed` 的当前值传递给了 `Timer` 组件（组件props 传值），这个值是不可变值`0`(JS中所有的原始类型值都是不可变的)。
 这个数值永远都不会改变，因此 `Timer` 组件不会更新。`secondsPassed`的值将来会发生改变，
 所以我们需要在组件**中**访问它。或者换句话说: 值需要**通过引用**来传递而不是通过(字面量)值来传递。
 
